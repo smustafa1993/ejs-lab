@@ -1,0 +1,40 @@
+<%- include('./partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body style="background-color: rgb(74, 74, 74);">
+  <h1>Full Menu</h1>
+
+  
+  <% displayCategory=(cat)=>{%>
+  <ul>
+  <%  RESTAURANT.menu.forEach(element => {%>
+    <% if(element.category == cat){ %>
+    <li> <%= element.name %>  -  <%= element.price  %>$ </li>
+ <% }})%>
+</ul>
+<% } %>
+<h2>Mains:</h2>
+<% displayCategory("mains") %>
+
+<h2>Desserts:</h2>
+<% displayCategory("desserts") %>
+
+<h2>Sides:</h2>
+<% displayCategory("sides") %>
+
+<!-- <ul>
+  <%  RESTAURANT.menu.forEach(element => {%>
+    <h2>Mains</h2>
+    <% if(element.category == "mains"){ %>
+    <li> <%= element.name %>  -  <%= element.price  %>$ </li>
+ <% }})%>
+</ul> -->
+
+
+</body>
+</html>

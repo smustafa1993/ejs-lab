@@ -1,0 +1,35 @@
+<%- include('./partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body style="background-color: rgb(74, 74, 74);">
+  <h1>Home Page</h1>
+
+
+  <!-- <h1><%= RESTAURANT.name %></h1>
+
+<ul>
+  <% RESTAURANT.menu.forEach(item => { %>
+    <li><%= item.name %> - $<%= item.price %></li>
+  <% }) %>
+</ul> -->
+
+<h1>Name: <%= RESTAURANT.name %></h1>
+<h1>Address: </Address>:<%= RESTAURANT.address %></h1>
+<h1>Phone:  </Address>:<%= RESTAURANT.phone %></h1>
+
+<% if(RESTAURANT.isOpen){
+
+    %> <h1>Yes, we are open! </h1> <%
+
+}else {%>
+    We are closed today!
+<%}%>  
+
+
+</body>
+</html>
