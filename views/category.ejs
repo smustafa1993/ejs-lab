@@ -12,7 +12,9 @@
     <ul>
     <% catg.forEach(element=>{ %>
 
-      <li><h4><%= element.name %>- <%= element.price %>$ - Rating: <%= element.rating %>   </br></br> Dish details:</br></br> <%= element.details %></h4></li>
+      <li><h4><%= element.name %>- <% for (i=0; i<element.rating; i++){ %> &#11088;<% } %></br>
+        
+        <%= element.price %>$ - Rating: <%= element.rating %>   </br></br> Dish details:</br></br> <%= element.details %></h4></li>
 
    <% }) %>
   </ul>
