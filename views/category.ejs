@@ -1,0 +1,22 @@
+<%- include('./partials/nav') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body style="background-color: rgb(74, 74, 74);">
+  <h1><%= capitalCat %></h1>
+
+    <ul>
+    <% catg.forEach(element=>{ %>
+
+      <li><h4><%= element.name %>- <%= element.price %>$ - Rating: <%= element.rating %>   </br></br> Dish details:</br></br> <%= element.details %></h4></li>
+
+   <% }) %>
+  </ul>
+
+
+</body>
+</html>

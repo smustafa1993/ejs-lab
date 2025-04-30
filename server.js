@@ -23,6 +23,35 @@ app.get('/menu',(req,res)=>{
     })
 })
 
+app.get('/menu/:category',(req,res)=>{
+  let catg=[]
+  const category=req.params.category;
+  const capitalCat=(category.substring(0,1)).toUpperCase() + category.substring(1)
+
+ 
+//  for (i=0;i<RESTAURANT.menu.length;i++)
+//  {
+//    if(RESTAURANT.menu[i].category=req.params.category){
+//      catg+= ` ${RESTAURANT.menu[i].name} `
+//    }
+
+//  }
+
+RESTAURANT.menu.forEach(element => {
+  if(element.category==req.params.category){
+
+    catg.push(element)
+
+
+  }
+});
+ res.render('./category.ejs',{
+   catg,
+  capitalCat
+ })
+
+})
+
 
 
 const RESTAURANT = {
@@ -76,3 +105,4 @@ const RESTAURANT = {
 
 
 
+ 
